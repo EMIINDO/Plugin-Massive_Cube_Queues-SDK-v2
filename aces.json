@@ -1,0 +1,99 @@
+﻿{
+	"Queues":
+	{
+		"conditions":
+		[
+			{
+				"id": "isEmpty",
+				"scriptName": "isEmpty",
+				"highlight": true,
+				"isInvertible": false,
+				"isFakeTrigger": false,
+				"params":
+				[
+					{"id": "queueID", "type": "string", "initialValue": "\"\""}
+				]
+			}	
+		],
+		"actions":
+		[
+			{
+				"id": "createQueue",
+				"scriptName": "createQueue",
+				"highlight": true,
+				"params":
+				[
+					{"id": "id", "type": "string", "initialValue": "\"\""}
+				]
+			},
+			{
+				"id": "enqueue",
+				"scriptName": "enqueue",
+				"highlight": false,
+				"params":
+				[
+					{"id": "ID", "type": "string", "initialValue": "\"\""},
+					{"id": "txt", "type": "string", "initialValue": "\"\""}
+				]
+			},
+			{
+				"id": "deleteQueue",
+				"scriptName": "deleteQueue",
+				"highlight": false,
+				"params":
+				[
+					{"id": "queueID", "type": "string", "initialValue": "\"\""}
+				]
+			},
+			{
+				"id": "loadQueue",
+				"scriptName": "loadFromJSONFile",
+				"highlight": false,
+				"params":
+				[
+					{"id": "queueID", "type": "string", "initialValue": "\"\""},
+					{"id": "json", "type": "string", "initialValue": "\"\""}
+				]
+			}	
+		],
+		"expressions":
+		[
+			{
+				"id": "peek",
+				"expressionName": "peek",
+				"returnType": "string",
+				"params":
+				[
+					{"id": "id", "type": "string", "initialValue": "\"\""}
+				]
+			},
+			{
+				"id": "dequeue",
+				"expressionName": "dequeue",
+				"returnType": "string",
+				"params":
+				[
+					{"id": "id", "type": "string", "initialValue": "\"\""}
+				]
+			},
+			{
+				"id": "getLength",
+				"expressionName": "getLength",
+				"returnType": "number",
+				"params":
+				[
+					{"id": "queueID", "type": "string", "initialValue": "\"\""}
+				]
+			},
+			{
+				"id": "getAsJson",
+				"expressionName": "getAsJson",
+				"returnType": "string",
+				"params":
+				[
+					{"id": "queueID", "type": "string", "initialValue": "\"\""}
+				]
+			}
+		]
+	}
+}

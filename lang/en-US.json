@@ -1,0 +1,132 @@
+﻿{
+	"languageTag": "en-US",
+	"fileDescription": "Queues Plugin.",
+	"text": {
+		"plugins": {
+			"massive_cube_queues": {
+				"name": "Queues",
+				"description": "A queue is a first-in first-out (FIFO) data.",
+				"help-url": "https://www.massive-cube.com/community",
+				"properties": {
+					
+				},
+				"aceCategories": {
+					"Queues": "Queues"
+				},
+				"conditions": {
+					"isEmpty": {
+						"list-name":"isEmpty",
+						"display-text":"Queue {0} is empty",
+						"description":"Queue is empty",
+						"params": {
+							"queueID": {
+								"name": "\"Queue-ID\"", 
+								"desc": "Queue-ID"
+							}
+						}
+						
+					}
+				},
+				"actions": {
+					"createQueue": {
+						"list-name":"Create Queue",
+						"display-text":"Create Queue with ID {0}",
+						"description":"Create new Queue",
+						"params": {
+							"id": {
+								"name": "\"Create queue with id\"", 
+								"desc": "Create queue with id"
+							}
+						}
+						
+					},
+					"enqueue": {
+						"list-name":"Enqueue",
+						"display-text":"Enqueue with ID {0} and Text {1}",
+						"description":"Enqueue",
+						"params": {
+							"ID": {
+								"name": "\"Queue-ID\"", 
+								"desc": "Queue-ID"
+							},
+							"txt": {
+								"name": "\"Queue-String\"", 
+								"desc": "Queue-String"
+							}
+						}
+						
+					},
+					"deleteQueue": {
+						"list-name":"Delete Queue",
+						"display-text":"Delete Queue with ID {0}",
+						"description":"Delete Queue",
+						"params": {
+							"queueID": {
+								"name": "\"Queue-ID\"", 
+								"desc": "Queue-ID"
+							}
+						}
+					},
+					"loadQueue": {
+						"list-name":"Load Queue from JSON",
+						"display-text":"Load Queue from JSON with ID {0} and JSON {1}",
+						"description":"Load Queue from JSON",
+						"params": {
+							"queueID": {
+								"name": "\"Queue-ID\"", 
+								"desc": "Queue-ID"
+							},
+							"json": {
+								"name": "\"JSON-String\"", 
+								"desc": "Json string"
+							}
+						}
+					}
+
+				},
+				"expressions": {
+					"peek": {
+						"description":"Get the item at the front of the queue",
+						"translated-name":"Peek",
+						"params": {
+							"id": {
+								"name": "\"Queue-ID\"", 
+								"desc": "Queue-ID"
+							}
+						}
+					},
+					"dequeue": {
+						"description":"Dequeue an item",
+						"translated-name":"Dequeue",
+						"params": {
+							"id": {
+								"name": "\"Queue-ID\"", 
+								"desc": "Queue-ID"
+							}
+						}
+					},
+					"getLength": {
+						"description":"Get length of the queue",
+						"translated-name":"Get length of queue",
+						"params": {
+							"queueID": {
+								"name": "\"Queue-ID\"", 
+								"desc": "Queue-ID"
+							}
+						}
+					},
+					"getAsJson": {
+						"description":"Get Queues as JSON",
+						"translated-name":"Get Queues as JSON",
+						"params": {
+							"queueID": {
+								"name": "\"Queue-ID\"", 
+								"desc": "Queue-ID"
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
